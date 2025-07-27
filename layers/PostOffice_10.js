@@ -1,0 +1,1 @@
+var json_PostOffice_10 = {"type":"FeatureCollection","name":"PostOffice_10","features":[{"type":"Feature","properties":{"Name":"Post Office","PostOffice":"The Post Office in Taiwan, operated by Chunghwa Post, is a vital part of the country's daily life and infrastructure.","Photo":null},"geometry":{"type":"Point","coordinates":[120.406379765193591,22.727058931955451]}}]}
