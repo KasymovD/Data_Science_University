@@ -11,6 +11,10 @@
         <link href="resources/photon-geocoder-autocomplete.min.css" rel="stylesheet">
         <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
         <link rel="stylesheet" href="./resources/qgis2web.css">
+        <link rel="stylesheet" href="resources/ol.css">
+        <link rel="stylesheet" href="resources/ol-layerswitcher.css">
+        <link rel="stylesheet" href="resources/qgis2web.css">
+        <link rel="stylesheet" href="resources/materialize.min.css"><!-- если используется -->
         <style>
         html, body {
             background-color: #ffffff;
@@ -47,6 +51,18 @@
     </head>
     <body>
         <div id="map">
+            <!-- Контейнеры для контролов -->
+            <div id="top-left-container"></div>
+            <div id="bottom-left-container"></div>
+            <div id="top-right-container"></div>
+            <div id="bottom-right-container"></div>
+
+            <!-- Попап (если у тебя его НЕТ в HTML — добавь; если уже есть, этот блок не дублировать) -->
+            <div id="popup" class="ol-popup">
+            <button id="popup-closer" class="ol-popup-closer" aria-label="Close">×</button>
+            <div id="popup-content"></div>
+            </div>
+
             <div id="popup" class="ol-popup">
                 <a href="#" id="popup-closer" class="ol-popup-closer"></a>
                 <div id="popup-content"></div>
