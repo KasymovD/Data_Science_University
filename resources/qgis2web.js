@@ -380,7 +380,7 @@ function onSingleClickWMS(evt) {
                 });
             if (url) {
                 const wmsTitle = wms_layers[i][0].get('popuplayertitle');
-                var ldsRoller = '<div id="lds-roller"><img class="lds-roller-img" style="height: 25px; width: 25px;"></img></div>';
+                var ldsRoller = '<span class="spinner" title="Loading…"></span>';
 
                 popupCoord = coord;
                 popupContent += ldsRoller;
@@ -426,7 +426,7 @@ function onSingleClickWMS(evt) {
                     })
                     .finally(() => {
                         setTimeout(() => {
-                            var loaderIcon = document.querySelector('#lds-roller');
+                            var loaderIcon = document.querySelector('.spinner');
                             if (loaderIcon) loaderIcon.remove();
                         }, 500); // (0.5 second)
                     });
