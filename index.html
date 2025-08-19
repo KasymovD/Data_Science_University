@@ -50,33 +50,65 @@
         <title>I-Shou University</title>
     </head>
     <body>
-        <div id="map">
-            <!-- Контейнеры для контролов -->
-            <div id="top-left-container"></div>
-            <div id="bottom-left-container"></div>
-            <div id="top-right-container"></div>
-            <div id="bottom-right-container"></div>
+        <!-- Карта отдельным блоком -->
+        <div id="map" class="map-root"></div>
 
-            <!-- Попап (если у тебя его НЕТ в HTML — добавь; если уже есть, этот блок не дублировать) -->
-            <div id="popup" class="ol-popup">
+        <!-- Контейнеры для контролов (один раз!) -->
+        <div id="top-left-container"></div>
+        <div id="bottom-left-container"></div>
+        <div id="top-right-container"></div>
+        <div id="bottom-right-container"></div>
+
+        <!-- Попап (тоже один раз!) -->
+        <div id="popup" class="ol-popup">
             <button id="popup-closer" class="ol-popup-closer" aria-label="Close">×</button>
             <div id="popup-content"></div>
-            </div>
-
-            <div id="popup" class="ol-popup">
-                <a href="#" id="popup-closer" class="ol-popup-closer"></a>
-                <div id="popup-content"></div>
-            </div>
         </div>
-        <script src="resources/qgis2web_expressions.js"></script>
-        <script src="./resources/functions.js"></script>
-        <script src="./resources/ol.js"></script>
-        <script src="./resources/ol-layerswitcher.js"></script>
+
+        <!-- Скрипты: порядок важен -->
+        <!-- 1) Библиотеки -->
+        <script src="resources/polyfills.js"></script>
+        <script src="resources/proj4.js"></script>
+        <script src="resources/ol.js"></script>
+        <script src="resources/ol-layerswitcher.js"></script>
+        <script src="resources/Autolinker.min.js"></script>
         <script src="resources/photon-geocoder-autocomplete.min.js"></script>
-        <script src="layers/WomensDormitory_5.js"></script><script src="layers/MensDormitory_6.js"></script><script src="layers/Food_7.js"></script><script src="layers/BusStation_8.js"></script><script src="layers/Gym_9.js"></script><script src="layers/PostOffice_10.js"></script><script src="layers/BasketballCourt_11.js"></script><script src="layers/FootballField_12.js"></script><script src="layers/EducationBuilding_13.js"></script>
-        <script src="styles/WomensDormitory_5_style.js"></script><script src="styles/MensDormitory_6_style.js"></script><script src="styles/Food_7_style.js"></script><script src="styles/BusStation_8_style.js"></script><script src="styles/Gym_9_style.js"></script><script src="styles/PostOffice_10_style.js"></script><script src="styles/BasketballCourt_11_style.js"></script><script src="styles/FootballField_12_style.js"></script><script src="styles/EducationBuilding_13_style.js"></script>
-        <script src="./layers/layers.js" type="text/javascript"></script> 
-        <script src="./resources/Autolinker.min.js"></script>
-        <script src="./resources/qgis2web.js"></script>
-    </body>
+
+        <!-- 2) Вспомогательные (если используются) -->
+        <!-- <script src="resources/OSMBuildings-OL3.js"></script> -->
+        <!-- <script src="resources/nouislider.min.js"></script> -->
+        <!-- <script src="resources/horsey.min.js"></script> -->
+
+        <!-- 3) Экспрешены и функции -->
+        <script src="resources/qgis2web_expressions.js"></script>
+        <script src="resources/functions.js"></script>
+
+        <!-- 4) Слои и их стили (сначала стили, потом сами слои/registry) -->
+        <script src="styles/WomensDormitory_5_style.js"></script>
+        <script src="styles/MensDormitory_6_style.js"></script>
+        <script src="styles/Food_7_style.js"></script>
+        <script src="styles/BusStation_8_style.js"></script>
+        <script src="styles/Gym_9_style.js"></script>
+        <script src="styles/PostOffice_10_style.js"></script>
+        <script src="styles/BasketballCourt_11_style.js"></script>
+        <script src="styles/FootballField_12_style.js"></script>
+        <script src="styles/EducationBuilding_13_style.js"></script>
+
+        <script src="layers/WomensDormitory_5.js"></script>
+        <script src="layers/MensDormitory_6.js"></script>
+        <script src="layers/Food_7.js"></script>
+        <script src="layers/BusStation_8.js"></script>
+        <script src="layers/Gym_9.js"></script>
+        <script src="layers/PostOffice_10.js"></script>
+        <script src="layers/BasketballCourt_11.js"></script>
+        <script src="layers/FootballField_12.js"></script>
+        <script src="layers/EducationBuilding_13.js"></script>
+
+        <!-- Сводный реестр слоёв -->
+        <script src="layers/layers.js" type="text/javascript"></script>
+
+        <!-- 5) Финальный инициализатор -->
+        <script src="resources/qgis2web.js"></script>
+        </body>
+
 </html>
