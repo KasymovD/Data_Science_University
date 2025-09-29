@@ -34,7 +34,7 @@
 /* кнопка "назад", которая появляется при раскрытой легенде */
 .layer-switcher.shown > button {
   width: 35px !important;
-  height: 35px !important;
+  height: 22px !important;
   font-size: 14px !important;
   line-height: 20px !important;
   padding: 0 !important;

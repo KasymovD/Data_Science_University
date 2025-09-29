@@ -455,7 +455,7 @@ var Title = new ol.control.Control({
     element: (() => {
         var titleElement = document.createElement('div');
         titleElement.className = 'bottom-right-title ol-control';
-        titleElement.innerHTML = '<h1 class="project-title">義守大學</h1>';
+        titleElement.innerHTML = '<h2 class="project-title">義守大學互動地圖</h2>';
         return titleElement;
     })(),
     target: 'bottom-right-container'
