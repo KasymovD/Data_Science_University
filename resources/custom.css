@@ -39,13 +39,7 @@
   font-family: "Segoe UI", Inter, Arial, sans-serif;
 }
 
-/* «Хвостик» вниз */
-.ol-popup:after, .ol-popup:before {
-  top: 100%; left: 28px; content: ""; position: absolute; border: solid transparent;
-  height: 0; width: 0; pointer-events: none;
-}
-.ol-popup:after  { border-top-color: #ffffff; border-width: 10px; margin-left: -10px; }
-.ol-popup:before { border-top-color: #ffffff; border-width: 12px; margin-left: -12px; }
+
 
 /* Кнопка закрытия */
 .ol-popup-closer {

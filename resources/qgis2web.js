@@ -4,12 +4,18 @@ var map = new ol.Map({
     renderer: 'canvas',
     layers: layersList,
     view: new ol.View({
-         maxZoom: 28, minZoom: 1
+        maxZoom: 150,
+        minZoom: 1,
+        center: ol.proj.fromLonLat([120.405488, 22.727174]), // долгота, широта
+        zoom: 17
     })
 });
 
+// закомментировать fit
+// map.getView().fit([13401901.900264, 2597693.457811, 13404931.532531, 2600070.719924], map.getSize());
+
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([13401901.900264, 2597693.457811, 13404931.532531, 2600070.719924], map.getSize());
+// map.getView().fit([13401901.900264, 2597693.457811, 13404931.532531, 2600070.719924], map.getSize());
 
 ////small screen definition
     var hasTouchScreen = map.getViewport().classList.contains('ol-touch');
@@ -514,6 +520,7 @@ var attributionList = document.createElement('li');
 attributionList.innerHTML = `
 	<a href="https://oica.ishouuniversity.com/">OICA</a> &middot;
 	<a href="https://www.isu.edu.tw/">ISU</a> &middot;
+    <a href="https://www.edathemepark.com.tw/">Eda</a> &middot;
 `;
 var bottomAttributionUl = bottomAttribution.element.querySelector('ul');
 if (bottomAttributionUl) {
