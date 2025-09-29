@@ -449,7 +449,7 @@ var Title = new ol.control.Control({
     element: (() => {
         var titleElement = document.createElement('div');
         titleElement.className = 'bottom-right-title ol-control';
-        titleElement.innerHTML = '<h2 class="project-title">I-Shou University</h2>';
+        titleElement.innerHTML = '<h1 class="project-title">義守大學</h1>';
         return titleElement;
     })(),
     target: 'bottom-right-container'
@@ -512,9 +512,8 @@ map.addControl(bottomAttribution);
 
 var attributionList = document.createElement('li');
 attributionList.innerHTML = `
-	<a href="https://github.com/qgis2web/qgis2web">qgis2web</a> &middot;
-	<a href="https://openlayers.org/">OpenLayers</a> &middot;
-	<a href="https://qgis.org/">QGIS</a>	
+	<a href="https://oica.ishouuniversity.com/">OICA</a> &middot;
+	<a href="https://www.isu.edu.tw/">ISU</a> &middot;
 `;
 var bottomAttributionUl = bottomAttribution.element.querySelector('ul');
 if (bottomAttributionUl) {

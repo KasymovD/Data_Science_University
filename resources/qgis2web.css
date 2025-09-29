@@ -182,10 +182,19 @@ td video {
 }
 
 
-.project-title  {
-    margin: 1px;
-    padding: 5px;
+.project-title {
+  width: 120px;
+  height: 60px;
+  margin: 1px;
+  padding: 5px;
+
+  display: flex;                /* включаем flexbox */
+  align-items: center;          /* по вертикали */
+  justify-content: center;      /* по горизонтали */
+
+  text-align: center;           /* если текст в несколько строк */
 }
+
 
 #abstract {
     max-width: 30%;

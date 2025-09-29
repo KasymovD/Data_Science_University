@@ -1,0 +1,110 @@
+/* Сетка в 2 колонки только для Overlays-группы */
+.layer-switcher .group.overlays .layers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 10px;
+}
+.layer-switcher .group.overlays .layer {
+  display: grid;
+  grid-template-columns: 18px 22px auto;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 6px;
+  border-radius: 8px;
+}
+@media (max-width: 560px) {
+  .layer-switcher .group.overlays .layers { grid-template-columns: 1fr; }
+}
+
+.layer-switcher .panel > button {
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 18px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+
+
+/* Карточка поп-апа — белый фон, белая рамка */
+.ol-popup {
+  background: #ffffff;                      /* белый фон */
+  color: #222;                              /* тёмный текст */
+  border: 2px solid #ffffff;                /* белая рамка */
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);   /* мягкая тень */
+  padding: 0;
+  min-width: 200px; max-width: 320px;
+  font-family: "Segoe UI", Inter, Arial, sans-serif;
+}
+
+/* «Хвостик» вниз */
+.ol-popup:after, .ol-popup:before {
+  top: 100%; left: 28px; content: ""; position: absolute; border: solid transparent;
+  height: 0; width: 0; pointer-events: none;
+}
+.ol-popup:after  { border-top-color: #ffffff; border-width: 10px; margin-left: -10px; }
+.ol-popup:before { border-top-color: #ffffff; border-width: 12px; margin-left: -12px; }
+
+/* Кнопка закрытия */
+.ol-popup-closer {
+  position: absolute; top: 8px; right: 10px;
+  font-size: 18px; color: #666; text-decoration: none;
+}
+.ol-popup-closer:hover { color: #000; }
+
+/* Заголовок и описание */
+#popup-content h3 {
+  margin: 0; font-size: 16px; letter-spacing: .3px;
+  color: #111;
+  text-transform: uppercase;
+}
+#popup-content p {
+  margin: .35rem 0 0; color: #444; font-size: 13.5px;
+}
+
+/* Картинки в поп-апе: максимум 35×35 */
+#popup-content img {
+  display: block;
+  width: 220px;          /* фиксированная ширина */
+  height: 120px;         /* фиксированная высота */
+  object-fit: contain;  /* картинка полностью влезает внутрь */
+  margin: 6px auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.2);
+}
+
+
+/* Таблицы */
+#popup-content table { width: 100%; border-collapse: collapse; }
+#popup-content td {
+  border-bottom: 1px solid #eee;
+  padding: 6px 0;
+  color: #333;
+}
+#popup-content td:first-child {
+  color: #777;
+  width: 34%;
+  padding-right: 8px;
+}
+
+
+#map::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;   /* клики проходят на карту */
+  z-index: 999;
+
+  /* радиальный градиент — центр прозрачный, края затемнённые */
+  background: radial-gradient(
+    circle at center,
+    rgba(0,0,0,0) 80%,   /* центр полностью прозрачный */
+    rgba(0,0,0,0.6) 100% /* края затемнённые */
+  );
+}
+
+

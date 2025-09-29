@@ -192,7 +192,7 @@ var lyr_EducationBuilding_13 = new ol.layer.Vector({
             });
 
 lyr_OSMDark_0.setVisible(true);lyr_ESRISatellite_1.setVisible(true);lyr_OpenStreetMap_2.setVisible(true);lyr_CartoVoyagerLabels_3.setVisible(true);lyr_Pioneermap_4.setVisible(true);lyr_WomensDormitory_5.setVisible(true);lyr_MensDormitory_6.setVisible(true);lyr_Food_7.setVisible(true);lyr_BusStation_8.setVisible(true);lyr_Gym_9.setVisible(true);lyr_PostOffice_10.setVisible(true);lyr_BasketballCourt_11.setVisible(true);lyr_FootballField_12.setVisible(true);lyr_EducationBuilding_13.setVisible(true);
-var layersList = [lyr_OSMDark_0,lyr_ESRISatellite_1,lyr_OpenStreetMap_2,lyr_CartoVoyagerLabels_3,lyr_Pioneermap_4,lyr_WomensDormitory_5,lyr_MensDormitory_6,lyr_Food_7,lyr_BusStation_8,lyr_Gym_9,lyr_PostOffice_10,lyr_BasketballCourt_11,lyr_FootballField_12,lyr_EducationBuilding_13];
+var layersList = [lyr_OSMDark_0,lyr_CartoVoyagerLabels_3,lyr_Pioneermap_4,lyr_OpenStreetMap_2,lyr_ESRISatellite_1, lyr_WomensDormitory_5,lyr_MensDormitory_6,lyr_Food_7,lyr_BusStation_8,lyr_Gym_9,lyr_PostOffice_10,lyr_BasketballCourt_11,lyr_FootballField_12,lyr_EducationBuilding_13];
 lyr_WomensDormitory_5.set('fieldAliases', {'Name': 'Name', 'Dormitory': 'Dormitory', 'Photo': 'Photo', });
 lyr_MensDormitory_6.set('fieldAliases', {'Name': 'Name', 'Dormitory': 'Dormitory', 'Photo': 'Photo', });
 lyr_Food_7.set('fieldAliases', {'Name': 'Name', 'Food': 'Food', 'Photo': 'Photo', });

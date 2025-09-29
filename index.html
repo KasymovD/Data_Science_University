@@ -11,6 +11,8 @@
         <link href="resources/photon-geocoder-autocomplete.min.css" rel="stylesheet">
         <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
         <link rel="stylesheet" href="./resources/qgis2web.css">
+        <link rel="stylesheet" href="resources/custom.css">
+
         <style>
         html, body {
             background-color: #ffffff;
@@ -43,9 +45,10 @@
             margin: 0;
         }
         </style>
-        <title>I-Shou University</title>
+        <title>義守大學</title>
     </head>
     <body>
+        
         <div id="map">
             <div id="popup" class="ol-popup">
                 <a href="#" id="popup-closer" class="ol-popup-closer"></a>
@@ -62,5 +65,32 @@
         <script src="./layers/layers.js" type="text/javascript"></script> 
         <script src="./resources/Autolinker.min.js"></script>
         <script src="./resources/qgis2web.js"></script>
+        <script>
+  // Ждём, когда карта уже создана (в qgis2web переменная обычно называется `map`)
+  window.addEventListener('load', function () {
+    if (!window.map) return;
+
+    const view = map.getView();
+
+    map.on('singleclick', function (evt) {
+      // найдём первый объект под курсором
+      const feature = map.forEachFeatureAtPixel(evt.pixel, f => f);
+      if (!feature) return;
+
+      // центр геометрии (подойдёт и для линий/полигонов)
+      const geom = feature.getGeometry();
+      const extent = geom.getExtent();
+      const center = ol.extent.getCenter(extent);
+
+      // Анимация фокуса
+      view.animate({
+        center: center,
+        zoom: Math.max(view.getZoom(), 18),  // поставь 16–19 под задачу
+        duration: 500
+      });
+    });
+  });
+</script>
+
     </body>
 </html>
