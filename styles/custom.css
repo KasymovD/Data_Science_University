@@ -1,0 +1,45 @@
+/* Контейнер */
+.leaflet-control-layers {
+  background: #ffffffcc;           /* полупрозрачный белый */
+  backdrop-filter: blur(6px);
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+  padding: 10px 10px 6px;
+  font: 14px/1.35 "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+/* Заголовки разделов (Base layers / Overlays) */
+.leaflet-control-layers-separator { display:none; }
+.leaflet-control-layers-group-label,
+.leaflet-control-layers-expanded .leaflet-control-layers-list > label {
+  font-weight: 600;
+  color: #222;
+  margin: 6px 0 4px;
+}
+
+/* Строки пунктов */
+.leaflet-control-layers-overlays label,
+.leaflet-control-layers-base label {
+  display: grid;
+  grid-template-columns: 22px 28px auto; /* чекбокс, иконка, текст */
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+.leaflet-control-layers-overlays label:hover { background: #f5f7fa; }
+
+/* Чекбоксы/радио */
+.leaflet-control-layers-selector { width: 18px; height: 18px; }
+
+/* Текст пункта */
+.leaflet-control-layers label span { color:#222; }
+
+/* Скролл, если много слоёв */
+.leaflet-control-layers-list { max-height: 60vh; overflow:auto; }
+
+/* Кнопка свернуть/развернуть (если используется collapsed:true) */
+.leaflet-control-layers-toggle {
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,.2));
+}
