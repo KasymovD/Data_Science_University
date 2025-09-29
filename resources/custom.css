@@ -102,3 +102,52 @@
 }
 
 
+
+
+/* убедимся, что #map позиционируется как контейнер для оверлеев */
+#map { position: relative; }
+
+/* сам прицел */
+#center-crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 26px;
+  height: 26px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;          /* не блокирует клики/перетаскивание карты */
+  z-index: 3000;
+}
+
+/* крест */
+#center-crosshair::before,
+#center-crosshair::after {
+  content: "";
+  position: absolute;
+  background: #ffd400;          /* цвет линий (жёлтый) */
+  opacity: 0.95;
+  border-radius: 1px;
+}
+#center-crosshair::before {      /* вертикальная линия */
+  width: 2px;
+  height: 26px;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+#center-crosshair::after {       /* горизонтальная линия */
+  height: 2px;
+  width: 26px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+/* тонкое колечко по центру */
+#center-crosshair .ring {
+  position: absolute;
+  inset: 6px;                    /* внутренний круг */
+  border: 2px solid #ffd400;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(255, 212, 0, .45);
+}
