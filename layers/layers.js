@@ -2,7 +2,7 @@ var wms_layers = [];
 
 
         var lyr_OSMDark_0 = new ol.layer.Tile({
-            'title': 'OSM Dark',
+            'title': '地圖5',
             'opacity': 1.000000,
             
             
@@ -13,7 +13,7 @@ var wms_layers = [];
         });
 
         var lyr_ESRISatellite_1 = new ol.layer.Tile({
-            'title': 'ESRI Satellite',
+            'title': '地圖4',
             'opacity': 1.000000,
             
             
@@ -24,7 +24,7 @@ var wms_layers = [];
         });
 
         var lyr_OpenStreetMap_2 = new ol.layer.Tile({
-            'title': 'OpenStreetMap',
+            'title': '地圖3',
             'opacity': 1.000000,
             
             
@@ -35,7 +35,7 @@ var wms_layers = [];
         });
 
         var lyr_CartoVoyagerLabels_3 = new ol.layer.Tile({
-            'title': 'Carto Voyager Labels',
+            'title': '地圖2',
             'opacity': 1.000000,
             
             
@@ -46,7 +46,7 @@ var wms_layers = [];
         });
 
         var lyr_Pioneermap_4 = new ol.layer.Tile({
-            'title': 'Pioneer map',
+            'title': '地圖1',
             'opacity': 1.000000,
             
             
@@ -68,7 +68,7 @@ var lyr_WomensDormitory_5 = new ol.layer.Vector({
                 style: style_WomensDormitory_5,
                 popuplayertitle: 'Women\'s Dormitory',
                 interactive: true,
-                title: '<img src="styles/legend/WomensDormitory_5.png" /> Women\'s Dormitory'
+                title: '<img src="styles/legend/WomensDormitory_5.png" /> 女生宿舍'
             });
 var format_MensDormitory_6 = new ol.format.GeoJSON();
 var features_MensDormitory_6 = format_MensDormitory_6.readFeatures(json_MensDormitory_6, 
@@ -83,7 +83,7 @@ var lyr_MensDormitory_6 = new ol.layer.Vector({
                 style: style_MensDormitory_6,
                 popuplayertitle: 'Men\'s Dormitory',
                 interactive: true,
-                title: '<img src="styles/legend/MensDormitory_6.png" /> Men\'s Dormitory'
+                title: '<img src="styles/legend/MensDormitory_6.png" /> 男生宿舍'
             });
 var format_Food_7 = new ol.format.GeoJSON();
 var features_Food_7 = format_Food_7.readFeatures(json_Food_7, 
@@ -98,7 +98,7 @@ var lyr_Food_7 = new ol.layer.Vector({
                 style: style_Food_7,
                 popuplayertitle: 'Food',
                 interactive: true,
-                title: '<img src="styles/legend/Food_7.png" /> Food'
+                title: '<img src="styles/legend/Food_7.png" /> 便利商店'
             });
 var format_BusStation_8 = new ol.format.GeoJSON();
 var features_BusStation_8 = format_BusStation_8.readFeatures(json_BusStation_8, 
@@ -113,7 +113,7 @@ var lyr_BusStation_8 = new ol.layer.Vector({
                 style: style_BusStation_8,
                 popuplayertitle: 'Bus Station',
                 interactive: true,
-                title: '<img src="styles/legend/BusStation_8.png" /> Bus Station'
+                title: '<img src="styles/legend/BusStation_8.png" /> 公車站'
             });
 var format_Gym_9 = new ol.format.GeoJSON();
 var features_Gym_9 = format_Gym_9.readFeatures(json_Gym_9, 
@@ -128,7 +128,7 @@ var lyr_Gym_9 = new ol.layer.Vector({
                 style: style_Gym_9,
                 popuplayertitle: 'Gym',
                 interactive: true,
-                title: '<img src="styles/legend/Gym_9.png" /> Gym'
+                title: '<img src="styles/legend/Gym_9.png" /> 健身房'
             });
 var format_PostOffice_10 = new ol.format.GeoJSON();
 var features_PostOffice_10 = format_PostOffice_10.readFeatures(json_PostOffice_10, 
@@ -143,7 +143,7 @@ var lyr_PostOffice_10 = new ol.layer.Vector({
                 style: style_PostOffice_10,
                 popuplayertitle: 'Post Office',
                 interactive: true,
-                title: '<img src="styles/legend/PostOffice_10.png" /> Post Office'
+                title: '<img src="styles/legend/PostOffice_10.png" /> 郵局'
             });
 var format_BasketballCourt_11 = new ol.format.GeoJSON();
 var features_BasketballCourt_11 = format_BasketballCourt_11.readFeatures(json_BasketballCourt_11, 
@@ -158,7 +158,7 @@ var lyr_BasketballCourt_11 = new ol.layer.Vector({
                 style: style_BasketballCourt_11,
                 popuplayertitle: 'Basketball Court',
                 interactive: true,
-                title: '<img src="styles/legend/BasketballCourt_11.png" /> Basketball Court'
+                title: '<img src="styles/legend/BasketballCourt_11.png" /> 籃球場'
             });
 var format_FootballField_12 = new ol.format.GeoJSON();
 var features_FootballField_12 = format_FootballField_12.readFeatures(json_FootballField_12, 
@@ -173,7 +173,7 @@ var lyr_FootballField_12 = new ol.layer.Vector({
                 style: style_FootballField_12,
                 popuplayertitle: 'Football Field',
                 interactive: true,
-                title: '<img src="styles/legend/FootballField_12.png" /> Football Field'
+                title: '<img src="styles/legend/FootballField_12.png" /> 足球場'
             });
 var format_EducationBuilding_13 = new ol.format.GeoJSON();
 var features_EducationBuilding_13 = format_EducationBuilding_13.readFeatures(json_EducationBuilding_13, 
@@ -188,7 +188,7 @@ var lyr_EducationBuilding_13 = new ol.layer.Vector({
                 style: style_EducationBuilding_13,
                 popuplayertitle: 'Education Building',
                 interactive: true,
-                title: '<img src="styles/legend/EducationBuilding_13.png" /> Education Building'
+                title: '<img src="styles/legend/EducationBuilding_13.png" /> 教育大樓'
             });
 
 lyr_OSMDark_0.setVisible(true);lyr_ESRISatellite_1.setVisible(true);lyr_OpenStreetMap_2.setVisible(true);lyr_CartoVoyagerLabels_3.setVisible(true);lyr_Pioneermap_4.setVisible(true);lyr_WomensDormitory_5.setVisible(true);lyr_MensDormitory_6.setVisible(true);lyr_Food_7.setVisible(true);lyr_BusStation_8.setVisible(true);lyr_Gym_9.setVisible(true);lyr_PostOffice_10.setVisible(true);lyr_BasketballCourt_11.setVisible(true);lyr_FootballField_12.setVisible(true);lyr_EducationBuilding_13.setVisible(true);
